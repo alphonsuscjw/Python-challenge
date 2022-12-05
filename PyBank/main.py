@@ -1,3 +1,5 @@
+# Module to allow us to create file paths across operating systems
+import os
 
 # Module for reading CSV files
 import csv
@@ -25,7 +27,7 @@ def greatest_change(ini_list, final_list, ini_change):
 
     return greatest_change
 
-csv_path = 'C:/Users/User/Documents/Data Analytics Bootcamp/02-Homework/03-Python/Python-challenge/PyBank/Resources/budget_data.csv'
+csv_path = os.path.join('Resources','budget_data.csv')
 
 # Open the budget_data.csv file
 with open(csv_path, encoding='utf') as csvfile:
@@ -88,7 +90,7 @@ for i in output_list:
     print(i)
 
 # Specify the text file to write to
-output_path = 'C:/Users/User/Documents/Data Analytics Bootcamp/02-Homework/03-Python/Python-challenge/PyBank/Analysis/PyBank.txt'
+output_path = os.path.join('Analysis','PyBank.txt')
 
 # Open the text file using "write" mode
 with open(output_path, 'w') as f:

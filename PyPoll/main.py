@@ -1,8 +1,10 @@
+# Module to allow us to create file paths across operating systems
+import os
 
 # Module for reading CSV files
 import csv
 
-csv_path = 'C:/Users/User/Documents/Data Analytics Bootcamp/02-Homework/03-Python/Python-challenge/PyPoll/Resources/election_data.csv'
+csv_path = os.path.join('Resources','election_data.csv')
 
 # Open the election_data.csv file
 with open(csv_path, encoding='utf') as csvfile:
@@ -138,7 +140,7 @@ for i in output_list:
     print(i)
 
 # Specify the text file to write to
-output_path = 'C:/Users/User/Documents/Data Analytics Bootcamp/02-Homework/03-Python/Python-challenge/PyPoll/Analysis/PyPoll.txt'
+output_path = os.path.join('Analysis','PyPoll.txt')
 
 # Open the text file using "write" mode
 with open(output_path, 'w') as f:
